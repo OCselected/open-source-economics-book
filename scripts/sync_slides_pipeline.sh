@@ -80,24 +80,90 @@ if [ "$HAS_SLIDES" = true ]; then
         mkdir -p "$DEST_DIR"
         cp "$SRC_MD" "${DEST_DIR}/${DECK}.md"
 
-        echo "[render] Deck: $DECK"
-        if python3 "${SITE_REPO}/scripts/render_slide.py" --deck "$DECK"; then
-            echo "[render] ✓ $DECK"
-        else
-            echo "[render] ✗ $DECK failed"
+        # Detect source content change
+        NEW_HASH="$(sha256sum "$SRC_MD" | cut -d' ' -f1)"
+        OLD_HASH="$(git -C "$SITE_REPO" show HEAD:scripts/slides_decks_source/${DECK}.md 2>/dev/null | sha256sum | cut -d' ' -f1 || echo '')"
+
+        if [ "$NEW_HASH" != "$OLD_HASH" ]; then
+            echo "[source] $DECK content changed"
+
+            # Identify changed slide sections via diff
+            git -C "$SITE_REPO" show HEAD:scripts/slides_decks_source/${DECK}.md > /tmp/old_${DECK}.md 2>/dev/null || true
+            CHANGED_SLIDES="$(python3 -c "
+import re
+old = open('/tmp/old_${DECK}.md', 'r').read() if __import__('os').path.exists('/tmp/old_${DECK}.md') else ''
+new = open('${SRC_MD}', 'r').read()
+
+def slide_map(text):
+    return {int(m.group(1)): (m.start(), m.end()) for m in re.finditer(r'^## Slide (\d+)', text, re.MULTILINE)}
+    for m in re.finditer(r'^## Slide (\d+)', text, re.MULTILINE):
+        yield int(m.group(1)), m.start()
+
+def slide_ranges(text):
+    boundaries = list(slide_map(text))
+    ranges = {}
+    for i, (num, start) in enumerate(boundaries):
+        end = boundaries[i+1][1] if i+1 < len(boundaries) else len(text)
+        ranges[num] = (start, end)
+    return ranges
+
+old_ranges = slide_ranges(old)
+new_ranges = slide_ranges(new)
+
+# Find slides whose content changed or were added
+changed = set()
+for num, (ns, ne) in new_ranges.items():
+    if num not in old_ranges:
+        changed.add(num)  # new slide
+    else:
+        os_, oe_ = old_ranges[num]
+        if new[ns:ne].strip() != old[os_:oe_].strip():
+            changed.add(num)  # content changed
+# Find deleted slides
+deleted = set(old_ranges.keys()) - set(new_ranges.keys())
+
+print(' ' + ' '.join(str(s) for s in sorted(changed)))
+" 2>/dev/null || echo ' unknown")"
+
+            if [ -n "$CHANGED_SLIDES" ]; then
+                echo "[changed slides] ${CHANGED_SLIDES}"
+            fi
         fi
+
+        echo "[render] Deck: $DECK"
+        if [ -n "$CHANGED_SLIDES" ]; then
+            # Re-render only the changed slides
+            for SLIDE_NUM in ${CHANGED_SLIDES}; do
+                echo "  [render] slide ${SLIDE_NUM}"
+                python3 "${SITE_REPO}/scripts/render_slide.py" --deck "$DECK" --slide "$SLIDE_NUM" || \
+                    echo "  [render] ✗ slide ${SLIDE_NUM} failed"
+            done
+        else
+            # No source change: use delta mode (render missing pages only)
+            python3 "${SITE_REPO}/scripts/render_slide.py" --deck "$DECK"
+        fi
+        echo "[render] ✓ $DECK"
     done
 
     cd "$SITE_REPO"
+    HAS_HTML_CHANGES=false
     if [ "$(git diff --name-only -- 'static/slides_decks/' | wc -l)" -gt 0 ]; then
-        git add static/slides_decks/
+        HAS_HTML_CHANGES=true
+    fi
+    HAS_SOURCE_CHANGES=false
+    if [ "$(git diff --name-only -- 'scripts/slides_decks_source/' | wc -l)" -gt 0 ]; then
+        HAS_SOURCE_CHANGES=true
+    fi
+
+    if [ "$HAS_SOURCE_CHANGES" = true ] || [ "$HAS_HTML_CHANGES" = true ]; then
+        git add static/slides_decks/ scripts/slides_decks_source/
         git commit -m "auto: sync slides from open-source-economics-book@${CURRENT_COMMIT:0:7}
 
 Decks: ${DECKS_TO_RENDER}
 Trigger: sync_slides_pipeline.sh" \
             --author="auto-sync <narrow-corridor@opensourceway.community>"
         git push origin main
-        echo "[push] ✓ Slides committed"
+        echo "[push] ✓ Slides committed (source: $HAS_SOURCE_CHANGES, html: $HAS_HTML_CHANGES)"
     fi
 fi
 
