@@ -93,8 +93,9 @@ dark academic tone, Intellectual Visual System, art taste.
 ## Slide 5* 视觉隐喻：
   * 深蓝封面上，烫金标题与第十期编号如学术铭文
 
-- 排他权与容他权、比例原则与 Copyleft
-- 开源经济学12讲座  ·  第十期
+
+- 「开源之道」·开源的经济学
+- 开源经济学12讲座  ·  第十期  排他权与容他权、比例原则与 Copyleft
 - 「开源之道」·适兕
 
 ---

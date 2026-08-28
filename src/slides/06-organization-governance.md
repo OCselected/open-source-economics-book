@@ -59,7 +59,7 @@ dark academic tone, Intellectual Visual System, art taste.
 
 * 视觉隐喻：深普鲁士蓝几何扉页与"第六期 组织结构与治理"并列，象征议题开启。
 
-- 开源与经济学
+- 「开源之道」·开源的经济学
 - 开源经济学12讲座     第六期  组织结构与治理
 - 「开源之道」·适兕
 
