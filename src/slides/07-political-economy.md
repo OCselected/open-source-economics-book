@@ -53,7 +53,7 @@ dark academic tone, Intellectual Visual System, art taste.
 - 第4讲 开源的劳动力市场
 - 第5讲 交易成本与路径依赖
 - 第6讲 组织结构与治理
-- 第7讲 文化的重要作用
+
 
 ---
 
@@ -63,7 +63,7 @@ dark academic tone, Intellectual Visual System, art taste.
 
 - 开源与经济学
 - 开源经济学12讲座     第八期  商业价值与社会价值：开源的政治经济学
-- 「开源之道」·适兕
+- 主讲人：「开源之道」·适兕
 
 ---
 
@@ -75,7 +75,7 @@ dark academic tone, Intellectual Visual System, art taste.
 - 开源项目是公共物品，但公共物品谁来维护？
 - 「精心布局的开源」为什么经常失败？
 - 政治经济学的核心问题：谁受益？谁付出？制度如何分配？
-- 与奥斯特罗姆的桥接：开源是数字时代的公地
+- 与奥斯特罗姆的呼应：开源是数字时代的公地？
 
 ---
 
