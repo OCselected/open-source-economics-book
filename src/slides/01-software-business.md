@@ -395,9 +395,10 @@ dark academic tone, Intellectual Visual System, art taste.
 
 ---
 
-## Slide 31
+## Slide 30
 * 视觉隐喻：
   * 深普鲁士蓝书架上排列的五本书——制度经济学视角下的软件工业阅读地图
+
 * 第1期·软件的生产、分销和消费 · 推荐阅读
 * 《大教堂与集市》，Eric S. Raymond，机械工业出版社，2014.05
 * 《人月神话》，F. P. Brooks，清华大学出版社，2015.04
