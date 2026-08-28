@@ -87,43 +87,9 @@ if [ "$HAS_SLIDES" = true ]; then
         if [ "$NEW_HASH" != "$OLD_HASH" ]; then
             echo "[source] $DECK content changed"
 
-            # Identify changed slide sections via diff
+            # Identify changed slide sections (external script avoids shell quoting hell)
             git -C "$SITE_REPO" show HEAD:scripts/slides_decks_source/${DECK}.md > /tmp/old_${DECK}.md 2>/dev/null || true
-            CHANGED_SLIDES="$(python3 -c "
-import re
-old = open('/tmp/old_${DECK}.md', 'r').read() if __import__('os').path.exists('/tmp/old_${DECK}.md') else ''
-new = open('${SRC_MD}', 'r').read()
-
-def slide_map(text):
-    return {int(m.group(1)): (m.start(), m.end()) for m in re.finditer(r'^## Slide (\d+)', text, re.MULTILINE)}
-    for m in re.finditer(r'^## Slide (\d+)', text, re.MULTILINE):
-        yield int(m.group(1)), m.start()
-
-def slide_ranges(text):
-    boundaries = list(slide_map(text))
-    ranges = {}
-    for i, (num, start) in enumerate(boundaries):
-        end = boundaries[i+1][1] if i+1 < len(boundaries) else len(text)
-        ranges[num] = (start, end)
-    return ranges
-
-old_ranges = slide_ranges(old)
-new_ranges = slide_ranges(new)
-
-# Find slides whose content changed or were added
-changed = set()
-for num, (ns, ne) in new_ranges.items():
-    if num not in old_ranges:
-        changed.add(num)  # new slide
-    else:
-        os_, oe_ = old_ranges[num]
-        if new[ns:ne].strip() != old[os_:oe_].strip():
-            changed.add(num)  # content changed
-# Find deleted slides
-deleted = set(old_ranges.keys()) - set(new_ranges.keys())
-
-print(' ' + ' '.join(str(s) for s in sorted(changed)))
-" 2>/dev/null || echo ' unknown")"
+            CHANGED_SLIDES="$(python3 /home/lee/developing/open-source-economics-book/scripts/detect_changed_slides.py /tmp/old_${DECK}.md "$SRC_MD")"
 
             if [ -n "$CHANGED_SLIDES" ]; then
                 echo "[changed slides] ${CHANGED_SLIDES}"
