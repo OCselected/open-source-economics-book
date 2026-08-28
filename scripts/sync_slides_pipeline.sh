@@ -80,6 +80,15 @@ if [ "$HAS_SLIDES" = true ]; then
         mkdir -p "$DEST_DIR"
         cp "$SRC_MD" "${DEST_DIR}/${DECK}.md"
 
+        # Detect source content change: compute hash of new .md vs currently committed .md
+        NEW_HASH="$(sha256sum "$SRC_MD" | cut -d' ' -f1)"
+        OLD_HASH="$(git -C "$SITE_REPO" show HEAD:scripts/slides_decks_source/${DECK}.md 2>/dev/null | sha256sum | cut -d' ' -f1 || echo '')"
+
+        if [ "$NEW_HASH" != "$OLD_HASH" ]; then
+            echo "[source] $DECK content changed — clearing rendered pages for full re-render"
+            rm -f "${SITE_REPO}/static/slides_decks/${DECK}/pages"/*.html
+        fi
+
         echo "[render] Deck: $DECK"
         if python3 "${SITE_REPO}/scripts/render_slide.py" --deck "$DECK"; then
             echo "[render] ✓ $DECK"
@@ -89,15 +98,24 @@ if [ "$HAS_SLIDES" = true ]; then
     done
 
     cd "$SITE_REPO"
+    HAS_HTML_CHANGES=false
     if [ "$(git diff --name-only -- 'static/slides_decks/' | wc -l)" -gt 0 ]; then
-        git add static/slides_decks/
+        HAS_HTML_CHANGES=true
+    fi
+    HAS_SOURCE_CHANGES=false
+    if [ "$(git diff --name-only -- 'scripts/slides_decks_source/' | wc -l)" -gt 0 ]; then
+        HAS_SOURCE_CHANGES=true
+    fi
+
+    if [ "$HAS_SOURCE_CHANGES" = true ] || [ "$HAS_HTML_CHANGES" = true ]; then
+        git add static/slides_decks/ scripts/slides_decks_source/
         git commit -m "auto: sync slides from open-source-economics-book@${CURRENT_COMMIT:0:7}
 
 Decks: ${DECKS_TO_RENDER}
 Trigger: sync_slides_pipeline.sh" \
             --author="auto-sync <narrow-corridor@opensourceway.community>"
         git push origin main
-        echo "[push] ✓ Slides committed"
+        echo "[push] ✓ Slides committed (source: $HAS_SOURCE_CHANGES, html: $HAS_HTML_CHANGES)"
     fi
 fi
 
