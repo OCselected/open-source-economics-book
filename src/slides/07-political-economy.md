@@ -112,8 +112,8 @@ dark academic tone, Intellectual Visual System, art taste.
 
 * 视觉隐喻：微观世界的绚烂绽放与复杂交织，隐喻互联网从军事网络到公共基础设施的演化。
 
-- 读一本书就够了～
-
+- 如果想了解互联网是如何诞生并成为今天全球的基础设施的话，读一本书就够了～
+-  《How the Internet Became Commercial：Innovation, Privatization, and the Birth of a New Network》，Shane Greenstein， Princeton University Press，
 ---
 
 ## Slide 7

@@ -296,12 +296,12 @@ dark academic tone, Intellectual Visual System, art taste.
 * 视觉隐喻：
   * 红色复古便携唱机播放黑胶——模拟时代的仪式感，对比数字分发
 - 软件交付简史之初代
-- 和硬件不可分割
-- 大型机是屈指可数的
-- 定制占了很大部分
-- 安装调试像极了化工机械厂
-- 用户的需求是高度不同的
-- 图片来源：https://www.ibm.com/history/700
+  - 和硬件不可分割
+  - 大型机是屈指可数的
+  - 定制占了很大部分
+  - 安装调试像极了化工机械厂
+  - 用户的需求是高度不同的
+
 
 ---
 
@@ -310,12 +310,12 @@ dark academic tone, Intellectual Visual System, art taste.
 * 视觉隐喻：
   * 抽象蓝色节点网络——持续交付的自动化流水线
 - 软件交付简史之介质时代
-- 软盘、光盘、U盘
-- 实体商店仍然是主要的分发渠道
-- 邮寄继承自上一个零售的时代
-- EULA 的崛起
-- Click-wrap、Browse-wrap 、Shrink wrap 的发明
-- 软件工业化的时代开启
+  - 软盘、光盘、U盘
+  - 实体商店仍然是主要的分发渠道
+  - 邮寄继承自上一个零售的时代
+  - EULA 的崛起
+  - Click-wrap、Browse-wrap 、Shrink wrap 的发明
+  - 软件工业化的时代开启
 
 ---
 
@@ -324,11 +324,11 @@ dark academic tone, Intellectual Visual System, art taste.
 * 视觉隐喻：
   * 深色背景中蓝色几何连接——闭源软件商业模式的制度结构
 - 软件交付简史之网络下载
-- 网络分发成为常态：p2p
-- Web 技术的进步
-- 先下载，后付费
-- 订阅模式的崛起
-- 先体验，后买单
+  - 网络分发成为常态：p2p
+  - Web 技术的进步
+  - 先下载，后付费
+  - 订阅模式的崛起
+  - 先体验，后买单
 
 ---
 
@@ -337,11 +337,11 @@ dark academic tone, Intellectual Visual System, art taste.
 * 视觉隐喻：
   * Chrome logo 彩色版与单色版对比——开源与闭源同根分化的视觉隐喻
 - 软件交付简史之云与市场
-- 数据中心的规模化
-- 计算、存储、网络是可以租用和计费的
-- 软件可以围绕资源由用户做出选择
-- 应用市场的形成
-- 所有权的消失，与许可的无限权力形成
+  - 数据中心的规模化
+  - 计算、存储、网络是可以租用和计费的
+  - 软件可以围绕资源由用户做出选择
+  - 应用市场的形成
+  - 所有权的消失，与许可的无限权力形成
 
 ---
 
@@ -350,11 +350,11 @@ dark academic tone, Intellectual Visual System, art taste.
 * 视觉隐喻：
   * openEuler 六边形原子结构——开源生态的连接与协作
 - 举个例子：Chrome 的数字之旅
-- Chromium ：V8、ffmpeg
-- Chrome/Edge： Google/microsoft 加入闭源组件
-- 编译与分发：官网下载，应用市场
-- 意外之旅： Google 不能被访问，脱离了“正常”渠道
-- 谁在消费？谁又在负担成本？： 我们每天都在www频繁使用
+  - Chromium ：V8、ffmpeg
+  - Chrome/Edge： Google/microsoft 加入闭源组件
+  - 编译与分发：官网下载，应用市场
+  - 意外之旅： Google 不能被访问，脱离了“正常”渠道
+  - 谁在消费？谁又在负担成本？： 我们每天都在www频繁使用
 
 ---
 
