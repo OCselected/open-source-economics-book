@@ -96,7 +96,7 @@ def target_html():
         parts.append(generate_toc_html(slides_files))
         for f in slides_files:
             parts.append(generate_slide_chapter_html(f))
-        parts.append(generate_references_html())
+        parts.append(generate_references_html_pdf())
         out.write_text('\n'.join(parts), encoding='utf-8')
         print(f'HTML: {out} (fallback: from slides)')
         return
@@ -105,7 +105,7 @@ def target_html():
     parts.append(generate_toc_html(chapters))
     for ch in chapters:
         parts.append(generate_chapter_html(ch))
-    parts.append(generate_references_html())
+    parts.append(generate_references_html_pdf())
     out.write_text('\n'.join(parts), encoding='utf-8')
     print(f'HTML: {out} ({len(chapters)} chapters)')
 
@@ -145,26 +145,25 @@ def generate_toc_html(files):
 
 
 def generate_chapter_html(md_path):
-    content = read_md(md_path)
-    # Strip Pandoc-style citation keys [^key] → numbered footnotes later
-    slug = md_path.stem
-    # Simple markdown → HTML (full pandoc would be better; use it in target_html_pandoc)
-    title = slug.replace('-', ' ').replace('_', ' ').strip()
-    # Use pandoc for proper rendering
+    content = md_path.read_text(encoding='utf-8')
+    # Strip YAML frontmatter before pandoc
+    body = re.sub(r'^---\n.*?\n---\s*\n', '', content, flags=re.DOTALL)
+    # Write temp file without frontmatter
+    tmp = OUTPUT / f'_ch_{md_path.stem}.md'
+    tmp.write_text(body, encoding='utf-8')
+    # Convert markdown to HTML
     try:
         html = run(
-            f"pandoc {md_path} --from markdown+citeproc --to html --standalone=false "
-            f"--metadata title='{title}' "
-            f"--filter pandoc-citeproc "
-            f"--bibliography {REFERENCES / 'bibliography.bib'} 2>/dev/null || "
-            f"pandoc {md_path} --from markdown --to html --standalone=false"
+            f"pandoc {tmp} --from markdown --to html 2>/dev/null"
         )
     except Exception:
-        html = content.replace('\n', '<br>')
-    return f"""<div class="container" id="{slug}">
-<h1>{title}</h1>
-{html}
-</div>"""
+        html = _md_to_html(body)
+    title = ''
+    m = re.search(r'title:\s*"(.+?)"', content)
+    if m:
+        title = m.group(1)
+    slug = md_path.stem
+    return f'<div class="container" id="{slug}"><h1>{title}</h1>{html}</div>'
 
 
 def generate_slide_chapter_html(md_path):
@@ -182,81 +181,266 @@ def generate_slide_chapter_html(md_path):
     return f'<div class="container" id="{slug}"><h1>{title}</h1>{body}</div>'
 
 
-def generate_references_html():
-    return f"""<div class="container references">
-<h1>参考文献</h1>
-<p>参考文献库见 <code>references/bibliography.bib</code>（{len(list(REFERENCES.glob('*.bib')))} 篇）</p>
+def generate_references_html_pdf():
+    return f"""<div class="page" id="references">
+<h2>参考文献</h2>
+<p>参考文献库见 <code>references/bibliography.bib</code></p>
 </div>
 </body></html>"""
 
 
+# ── PDF-specific helpers ────────────────────────────────────────────────
+
+def generate_cover_html_pdf():
+    return """<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<style>
+@page {
+  size: A4;
+  margin: 0;
+}
+html, body {
+  margin: 0; padding: 0;
+  font-family: 'Source Han Serif SC', 'Noto Serif SC', 'Songti SC', 'STSong', serif;
+  color: #1A1A1A;
+}
+.page {
+  padding: 60px 60px;
+  page-break-after: always;
+}
+.cover-page {
+  background: #1B3B6B;
+  color: #F5F0E8;
+  text-align: center;
+  height: 100vh;
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  position: relative;
+  padding: 0;
+}
+.cover-page h1 {
+  font-size: 56px; font-weight: 700;
+  letter-spacing: 0.2em; margin-bottom: 16px;
+  color: #F5F0E8;
+}
+.cover-page .subtitle {
+  font-style: italic; font-size: 22px;
+  color: #D9A441; letter-spacing: 0.1em;
+  margin-bottom: 60px;
+}
+.cover-page .author {
+  font-size: 18px; opacity: 0.9;
+}
+.cover-page .year {
+  margin-top: 12px; font-size: 16px;
+  letter-spacing: 0.6em; color: #D9A441;
+}
+.cover-deco-circle {
+  position: absolute; width: 300px; height: 300px;
+  border-radius: 50%; border: 2px solid #D9A441;
+  opacity: 0.3;
+}
+.cover-deco-1 { top: -80px; left: -80px; }
+.cover-deco-2 { bottom: -80px; right: -80px; }
+.cover-deco-square {
+  position: absolute; width: 200px; height: 200px;
+  border: 1px solid #F5F0E8; opacity: 0.2;
+}
+.cover-deco-3 { top: 50px; right: 100px; }
+/* TOC */
+.toc-page h2 {
+  color: #1B3B6B; font-size: 28px;
+  border-bottom: 2px solid #8B7355; padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+.toc-page ul { list-style: none; padding: 0; }
+.toc-page li {
+  display: flex; align-items: baseline;
+  padding: 8px 0; border-bottom: 1px dotted #8B7355;
+}
+.toc-page .toc-num {
+  color: #8B7355; font-weight: 700; margin-right: 16px;
+  min-width: 36px; font-size: 14px;
+}
+.toc-page .toc-title {
+  color: #1B3B6B; font-size: 16px; flex: 1;
+}
+/* Chapter */
+.chapter-page h2 {
+  color: #1B3B6B; font-size: 26px;
+  border-bottom: 2px solid #8B7355; padding-bottom: 8px;
+}
+.chapter-page h3 {
+  color: #8B7355; font-size: 18px; margin-top: 20px;
+}
+.chapter-page p {
+  font-size: 14px; line-height: 1.85;
+  text-align: justify; text-indent: 2em;
+  margin-bottom: 10px;
+}
+.chapter-page blockquote {
+  border-left: 3px solid #8B7355; padding: 10px 20px;
+  margin: 16px 0; font-style: italic;
+  background: #EFE8D8; color: #1B3B6B;
+  font-size: 13px;
+}
+.chapter-page ul { font-size: 13px; margin: 8px 0; padding-left: 28px; }
+.chapter-page li { margin-bottom: 4px; }
+.chapter-page table {
+  width: 100%; border-collapse: collapse;
+  margin: 16px 0; font-size: 12px;
+}
+.chapter-page th, .chapter-page td {
+  border: 1px solid #8B7355; padding: 6px 8px; text-align: left;
+}
+.chapter-page th { background: #1B3B6B; color: #F5F0E8; }
+</style></head><body>
+<div class="cover-page">
+  <div class="cover-deco-circle cover-deco-1"></div>
+  <div class="cover-deco-circle cover-deco-2"></div>
+  <div class="cover-deco-square cover-deco-3"></div>
+  <h1>开源的<br/>经济学</h1>
+  <div class="subtitle">The Economics of Open Source</div>
+  <div class="author">「开源之道」·适兕</div>
+  <div class="year">MMXXVI</div>
+</div>"""
+
+
+def generate_toc_html_pdf(chapters):
+    items = ''
+    for i, ch in enumerate(chapters):
+        title = ch.stem.replace('-', ' ').replace('_', ' ').strip()
+        # Try to extract chapter title from frontmatter
+        content = ch.read_text(encoding='utf-8')
+        fm_title = ''
+        m = re.search(r'title:\s*"(.+?)"', content)
+        if m:
+            fm_title = m.group(1)
+        items += f'<li><span class="toc-num">{i:02d}</span><span class="toc-title">{fm_title}</span></li>\n'
+    return f"""<div class="page toc-page">
+<h2>目  录</h2>
+<ul>
+{items}
+</ul>
+</div>"""
+
+
+def generate_chapter_html_pdf(md_path):
+    content = md_path.read_text(encoding='utf-8')
+    # Strip YAML frontmatter
+    body = re.sub(r'^---\n.*?\n---\s*\n', '', content, flags=re.DOTALL)
+    # Basic markdown → HTML
+    html = _md_to_html(body)
+    # Extract chapter title
+    fm_title = ''
+    m = re.search(r'title:\s*"(.+?)"', content)
+    if m:
+        fm_title = m.group(1)
+    slug = md_path.stem
+    return f"""<div class="page chapter-page" id="{slug}">
+<h2>{fm_title}</h2>
+{html}
+</div>"""
+
+
+def generate_coda_html():
+    return """<div class="page chapter-page" id="coda">
+<h2>结语：开源经济学，也是 The Economics of Open Source</h2>
+<p>当我们回顾这 12 讲的内容——软件生产、知识财产、商业模式、劳动力市场、交易成本、组织治理、文化作用、政治经济学、信息规则、排他与容他、劳动报酬——我们实际上是在回答一个被主流经济学长期忽视的问题：</p>
+<blockquote>在没有雇佣关系、没有层级命令、没有价格信号的前提下，人类如何实现大规模、高可靠、持续几十年的协作？</blockquote>
+<p>这个问题不是边缘问题。它和 The Economics of Crime（Becker）、The Economics of AI（Agrawal）、The Economics of Knowledge（Foray）、The Economics of the Commons（Ostrom）、Doughnut Economics（Raworth）属于同一个家族。</p>
+<p><strong>开源经济学属于这个家族。</strong>它不是关于钱的，而是关于选择的。开源经济学不是关于代码的，而是关于不靠钱和权也能协作的选择。</p>
+<blockquote>——「开源之道」·适兕</blockquote>
+</div>"""
+
+
+def _md_to_html(text):
+    """Simple markdown → HTML converter (no pandoc dependency)."""
+    # Blockquotes
+    text = re.sub(r'^> (.+)$', r'<blockquote>\1</blockquote>', text, flags=re.MULTILINE)
+    # Headers
+    text = re.sub(r'^### (.+)$', r'<h3>\1</h3>', text, flags=re.MULTILINE)
+    text = re.sub(r'^## (.+)$', r'<h2>\1</h2>', text, flags=re.MULTILINE)
+    # Bold
+    text = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', text)
+    # Italic
+    text = re.sub(r'(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)', r'<em>\1</em>', text)
+    # Code
+    text = re.sub(r'`(.+?)`', r'<code>\1</code>', text)
+    # Horizontal rules
+    text = re.sub(r'^---$', r'<hr/>', text, flags=re.MULTILINE)
+    # Tables
+    if '|---' in text:
+        lines = text.split('\n')
+        out = []
+        i = 0
+        while i < len(lines):
+            if lines[i].startswith('|') and i + 1 < len(lines) and '---' in lines[i+1]:
+                # header row
+                headers = [c.strip() for c in lines[i].split('|')[1:-1]]
+                out.append('<table><thead><tr>' + ''.join(f'<th>{h}</th>' for h in headers) + '</tr></thead><tbody>')
+                i += 2
+                while i < len(lines) and lines[i].startswith('|'):
+                    cells = [c.strip() for c in lines[i].split('|')[1:-1]]
+                    out.append('<tr>' + ''.join(f'<td>{c}</td>' for c in cells) + '</tr>')
+                    i += 1
+                out.append('</tbody></table>')
+            else:
+                out.append(lines[i])
+                i += 1
+        text = '\n'.join(out)
+    # Unordered lists
+    text = re.sub(r'^\* (.+)$', r'<li>\1</li>', text, flags=re.MULTILINE)
+    text = re.sub(r'^- (.+)$', r'<li>\1</li>', text, flags=re.MULTILINE)
+    text = re.sub(r'(<li>.*?</li>\n?)+', lambda m: f'<ul>{m.group(0)}</ul>', text, flags=re.DOTALL)
+    # Paragraphs
+    text = re.sub(r'\n\n', r'</p><p>', text)
+    text = '<p>' + text + '</p>'
+    # Footnote references
+    text = re.sub(r'\[\^(\w+)\]', r'<sup>[\1]</sup>', text)
+    return text
+
+
+def generate_cover_html():
+    title = '开源的经济学'
+    subtitle = 'The Economics of Open Source'
+    author = '「开源之道」·适兕'
+    return f"""<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<title>{title}</title>
+<link rel="stylesheet" href="book.css">
+</head><body>
+<section class="cover">
+  <div class="cover-deco cover-deco-1"></div>
+  <div class="cover-deco cover-deco-2"></div>
+  <h1>{title}</h1>
+  <div class="subtitle">{subtitle}</div>
+  <div class="author">{author}</div>
+  <div class="year">MMXXVI</div>
+</section>"""
+
+
 def target_pdf():
-    """Compile book PDF via Pandoc + XeLaTeX."""
+    """Compile book PDF via Pandoc HTML + WeasyPrint."""
+    from weasyprint import HTML as WeasyHTML
     out_pdf = OUTPUT / 'open-source-economics.pdf'
     OUTPUT.mkdir(exist_ok=True)
 
-    # Collect chapter content into one pandoc doc
     chapters = sorted(SRC_CHAPTERS.glob('*.md'))
-    slides_files = sorted(SRC_SLIDES.glob('*.md'))
 
-    if chapters:
-        # Join chapters with pagebreaks
-        tmp = OUTPUT / '_book_combined.md'
-        lines = [
-            f'# 开源的经济学\n',
-            f'_The Economics of Open Source_\n',
-            f'_「开源之道」· 适兕 · MMXXVI_\n\n',
-            '\\\\[pagebreak]\n',
-        ]
-        for ch in chapters:
-            lines.append(read_md(ch))
-            lines.append('\n\n\\\\[pagebreak]\n')
-        tmp.write_text('\n'.join(lines), encoding='utf-8')
-        src_file = str(tmp)
-    else:
-        # Fallback: generate from slide files
-        tmp = OUTPUT / '_book_combined.md'
-        lines = [
-            '# 开源的经济学\n',
-            '_The Economics of Open Source_\n\n',
-            '\\\\[pagebreak]\n',
-        ]
-        for f in slides_files:
-            header, slides = parse_slide_deck(read_md(f))
-            title = f.stem.replace('-', ' ').strip()
-            lines.append(f'## 第 {f.stem.split("-")[0]} 讲 · {title}\n')
-            for num, content in slides:
-                lines.append(f'### Slide {num}\n\n{content}\n')
-            lines.append('\n\\\\[pagebreak]\n')
-        tmp.write_text('\n'.join(lines), encoding='utf-8')
-        src_file = str(tmp)
+    # Build standalone HTML with PDF-friendly styling
+    tmp_html = OUTPUT / '_book_pdf.html'
+    cover_html = generate_cover_html_pdf()
+    toc_html = generate_toc_html_pdf(chapters)
+    body_parts = [cover_html, toc_html]
+    for ch in chapters:
+        body_parts.append(generate_chapter_html_pdf(ch))
+    body_parts.append(generate_coda_html())
+    body_parts.append(generate_references_html_pdf())
+    tmp_html.write_text('\n'.join(body_parts), encoding='utf-8')
 
-    # Pandoc → LaTeX → XeLaTeX
-    tmp_latex = OUTPUT / '_book.tex'
-    run(
-        f"pandoc {src_file} --to latex --template={STYLES / 'book.latex'} "
-        f"--metadata pagetitle='开源的经济学' "
-        f"--bibliography={REFERENCES / 'bibliography.bib'} "
-        f"--citeproc --number-sections "
-        f"--output {tmp_latex}"
-    )
-    # XeLaTeX + Biber
-    try:
-        # First pass
-        run(f"xelatex -interaction=nonstopmode -output-directory={OUTPUT} {tmp_latex}")
-        # Biber
-        run(f"biber _book")
-        # Two more passes for cross-refs
-        run(f"xelatex -interaction=nonstopmode -output-directory={OUTPUT} {tmp_latex}")
-        run(f"xelatex -interaction=nonstopmode -output-directory={OUTPUT} {tmp_latex}")
-        shutil.move(str(OUTPUT / '_book.pdf'), str(out_pdf))
-        print(f'PDF: {out_pdf}')
-    except Exception as e:
-        print(f'PDF build FAILED: {e}')
-        print('PDF requires: pandoc, xelatex, ctex, biber, biblatex')
-        # Leave combined.md for manual build
-        print(f'  Intermediate Markdown: {tmp}')
-        print(f'  LaTeX template: {STYLES / "book.latex"}')
+    WeasyHTML(str(tmp_html)).write_pdf(str(out_pdf))
+    print(f'PDF: {out_pdf} ({out_pdf.stat().st_size/1024:.0f}KB, {len(chapters)} chapters)')
 
 
 def target_epub():

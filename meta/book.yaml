@@ -7,11 +7,11 @@ year: 2026
 language: zh-CN
 
 chapters:
-  - number: 00
+  - number: 0
     slug: introduction
     title: "第 00 期 · 开源与经济学"
     slide_file: 00-introduction
-    chapter_file: 00-preface
+    chapter_file: 00-introduction
   - number: 1
     slug: software-business
     title: "第 01 期 · 软件的生产、分销和消费"
@@ -44,26 +44,26 @@ chapters:
     chapter_file: 06-organization-governance
   - number: 7
     slug: political-economy
-    title: "第 07 期 · 商业价值与社会价值：开源的政治经济学"
+    title: "第 07 期 · 文化的重要作用"
     slide_file: 07-political-economy
-    chapter_file: 07-political-economy
+    chapter_file: 07-culture-matters
   - number: 8
     slug: information-economy
-    title: "第 08 期 · 信息规则与网络经济"
+    title: "第 08 期 · 商业价值与社会价值：开源的政治经济学"
     slide_file: 08-information-economy
-    chapter_file: 08-information-economy
+    chapter_file: 08-political-economy
   - number: 9
     slug: proprietary-rights
-    title: "第 09 期 · 排他权与容纳权、比例原则与 copyleft"
+    title: "第 09 期 · 信息规则与网络经济"
     slide_file: 09-proprietary-rights
-    chapter_file: 09-proprietary-rights
+    chapter_file: 09-information-economy
   - number: 10
     slug: labor-compensation
-    title: "第 10 期 · 劳动报酬与财产分配"
+    title: "第 10 期 · 排他权与容他权、比例原则与 copyleft"
     slide_file: 10-labor-compensation
-    chapter_file: 10-labor-compensation
+    chapter_file: 10-proprietary-rights
   - number: 11
     slug: culture-matters
-    title: "第 11 期 · 文化的重要作用"
+    title: "第 11 期 · 劳动报酬与财产分配"
     slide_file: 11-culture-matters
-    chapter_file: 11-culture-matters
+    chapter_file: 11-labor-compensation
