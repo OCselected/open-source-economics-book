@@ -352,8 +352,8 @@ dark academic tone, Intellectual Visual System, art taste.
 - Chromium ：V8、ffmpeg
 - Chrome/Edge： Google/microsoft 加入闭源组件
 - 编译与分发：官网下载，应用市场
-- 意外： Google 不能被访问，脱离了“正常”渠道
-- 消费： 我们每天都在www频繁使用
+- 意外之旅： Google 不能被访问，脱离了“正常”渠道
+- 谁在消费？谁又在负担成本？： 我们每天都在www频繁使用
 
 ---
 
