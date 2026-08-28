@@ -81,24 +81,27 @@ if [ "$HAS_SLIDES" = true ]; then
         cp "$SRC_MD" "${DEST_DIR}/${DECK}.md"
 
         # Detect source content change
+        CHANGED_SLIDES=""
         NEW_HASH="$(sha256sum "$SRC_MD" | cut -d' ' -f1)"
-        OLD_HASH="$(git -C "$SITE_REPO" show HEAD:scripts/slides_decks_source/${DECK}.md 2>/dev/null | sha256sum | cut -d' ' -f1 || echo '')"
+        OLD_HASH="$(git -C "$SITE_REPO" show HEAD:scripts/slides_decks_source/${DECK}.md 2>/dev/null | sha256sum 2>/dev/null | cut -d' ' -f1 || echo '')"
 
-        if [ "$NEW_HASH" != "$OLD_HASH" ]; then
+        if [ -z "$OLD_HASH" ]; then
+            echo "[new] $DECK (no prior version)"
+            CHANGED_SLIDES="RENDER_ALL"
+        elif [ "$NEW_HASH" != "$OLD_HASH" ]; then
             echo "[source] $DECK content changed"
-
-            # Identify changed slide sections (external script avoids shell quoting hell)
             git -C "$SITE_REPO" show HEAD:scripts/slides_decks_source/${DECK}.md > /tmp/old_${DECK}.md 2>/dev/null || true
-            CHANGED_SLIDES="$(python3 /home/lee/developing/open-source-economics-book/scripts/detect_changed_slides.py /tmp/old_${DECK}.md "$SRC_MD")"
-
-            if [ -n "$CHANGED_SLIDES" ]; then
-                echo "[changed slides] ${CHANGED_SLIDES}"
+            CHANGED_SLIDES="$(python3 /home/lee/developing/open-source-economics-book/scripts/detect_changed_slides.py /tmp/old_${DECK}.md "$SRC_MD" 2>/dev/null)" || CHANGED_SLIDES=""
+            if [ -z "$CHANGED_SLIDES" ]; then
+                CHANGED_SLIDES="RENDER_ALL"
             fi
+            echo "[changed slides] ${CHANGED_SLIDES}"
         fi
 
         echo "[render] Deck: $DECK"
-        if [ -n "$CHANGED_SLIDES" ]; then
-            # Re-render only the changed slides
+        if [ "$CHANGED_SLIDES" = "RENDER_ALL" ]; then
+            python3 "${SITE_REPO}/scripts/render_slide.py" --deck "$DECK"
+        elif [ -n "$CHANGED_SLIDES" ]; then
             for SLIDE_NUM in ${CHANGED_SLIDES}; do
                 echo "  [render] slide ${SLIDE_NUM}"
                 python3 "${SITE_REPO}/scripts/render_slide.py" --deck "$DECK" --slide "$SLIDE_NUM" || \
