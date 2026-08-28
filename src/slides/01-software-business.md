@@ -136,7 +136,8 @@ dark academic tone, Intellectual Visual System, art taste.
 
 * 视觉隐喻：
   * Margaret Hamilton 扶着登月代码高塔——软件工程史的奠基时刻
-- 代码/程序/软件发展简史
+
+ ** 代码/程序/软件发展简史**
 
 ---
 

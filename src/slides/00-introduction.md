@@ -695,8 +695,16 @@ dark academic tone, Intellectual Visual System, art taste.
 - 博弈论
 
 ---
-
 ## Slide 51
+
+* 视觉隐喻：
+  * 人工智能时代的到来
+
+* Tokenomics 
+* Agentic AI 
+* 开源的新任务和挑战
+
+## Slide 52
 
 * 视觉隐喻：
   * 制度层级结构图回顾——第0讲总结
@@ -704,9 +712,9 @@ dark academic tone, Intellectual Visual System, art taste.
 - 请记住，有时我们得到的反馈就像被包装丑陋的包裹——但这并不意味着包裹里面装的不是一份礼物。
 - ——大卫·布拉德福德，卡罗尔·罗宾 《深度关系：从建立信任到彼此成就》
 
----
 
-## Slide 52
+
+## Slide 53
 * 视觉隐喻：
   * 深普鲁士蓝背景，堆叠的书籍与思想脉络纹理，象征开源历史的层叠积累。
 
