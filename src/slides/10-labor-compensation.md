@@ -65,7 +65,7 @@ dark academic tone, Intellectual Visual System, art taste.
 - 经济学的思维方式
 - 解释现代世界
 - 制度、劳动与财产分配
-- 开源的可持续发展需要回答劳动报酬的问题
+- 开源的可持续发展需要回答劳动报酬的问题——制图仪视角
 
 ---
 ## Slide 3* 视觉隐喻：
