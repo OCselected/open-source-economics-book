@@ -1,0 +1,20 @@
+# Hugo build artifacts
+public/
+.hugo_build.lock
+.hugo_workspace/
+
+# Book build outputs
+output/
+_static/
+
+# Slides built from LLM — not committed here (synced via Hugo workflow)
+static/slides_decks/
+
+# OS-specific
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Temp
+*.log

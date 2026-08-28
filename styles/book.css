@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cream: #F5F0E8;
+  --prussian: #1B3B6B;
+  --copper: #8B7355;
+  --warm-white: #EFE8D8;
+  --ink: #1A1A1A;
+}
+
+html, body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Source Han Serif SC', 'Noto Serif SC', 'Songti SC', serif;
+  font-size: 18px;
+  line-height: 1.85;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+/* ── 封面 ── */
+.cover {
+  background: var(--prussian);
+  color: var(--cream);
+  text-align: center;
+  padding: 8rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.cover h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  margin-bottom: 1rem;
+  color: var(--cream);
+}
+.cover .subtitle {
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--copper);
+  letter-spacing: 0.1em;
+  margin-bottom: 3rem;
+}
+.cover .author {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+.cover .year {
+  margin-top: 1rem;
+  font-size: 1rem;
+  letter-spacing: 0.5em;
+  color: var(--copper);
+}
+.cover-deco {
+  position: absolute;
+  border: 2px solid var(--copper);
+  opacity: 0.3;
+}
+.cover-deco-1 {
+  width: 300px; height: 300px;
+  border-radius: 50%;
+  top: -100px; left: -100px;
+}
+.cover-deco-2 {
+  width: 200px; height: 200px;
+  top: -50px; right: -50px;
+  border-color: var(--cream);
+}
+
+/* ── 正文 ── */
+h1, h2, h3, h4 {
+  color: var(--prussian);
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+h1 { font-size: 2rem; border-bottom: 2px solid var(--copper); padding-bottom: 0.5rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; color: var(--copper); }
+
+p {
+  text-indent: 2em;
+  margin-bottom: 1em;
+  text-align: justify;
+}
+
+blockquote {
+  border-left: 3px solid var(--copper);
+  padding: 0.75rem 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  background: var(--warm-white);
+  color: var(--prussian);
+}
+
+/* ── 目录 ── */
+.toc-list {
+  list-style: none;
+  padding: 2rem 0;
+}
+.toc-list li {
+  display: flex;
+  align-items: baseline;
+  padding: 0.5rem 0;
+  border-bottom: 1px dotted var(--copper);
+}
+.toc-list li a {
+  color: var(--prussian);
+  text-decoration: none;
+  flex: 1;
+}
+.toc-list li a:hover {
+  color: var(--copper);
+}
+.toc-list .toc-num {
+  color: var(--copper);
+  font-weight: 700;
+  margin-right: 1rem;
+  min-width: 2rem;
+}
+
+/* ── 引用 ── */
+sup a {
+  color: var(--copper);
+  text-decoration: none;
+}
+.references {
+  font-size: 0.9rem;
+  color: var(--copper);
+}
+.references h2 { color: var(--prussian); }
+.references li {
+  margin-bottom: 0.5rem;
+  padding-left: 2em;
+  text-indent: -2em;
+}
+
+/* ── 代码块 ── */
+code, pre {
+  font-family: 'JetBrains Mono', 'Consolas', monospace;
+  font-size: 0.9em;
+}
+pre {
+  background: var(--warm-white);
+  border-left: 3px solid var(--copper);
+  padding: 1rem;
+  border-radius: 2px;
+  overflow-x: auto;
+}
+
+/* ── 页脚 ── */
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  color: var(--copper);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--copper);
+}

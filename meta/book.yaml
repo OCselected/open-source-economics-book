@@ -1,0 +1,69 @@
+# 开源的经济学
+
+title: "开源的经济学"
+subtitle: "The Economics of Open Source"
+author: "「开源之道」·适兕"
+year: 2026
+language: zh-CN
+
+chapters:
+  - number: 00
+    slug: introduction
+    title: "第 00 期 · 开源与经济学"
+    slide_file: 00-introduction
+    chapter_file: 00-preface
+  - number: 1
+    slug: software-business
+    title: "第 01 期 · 软件的生产、分销和消费"
+    slide_file: 01-software-business
+    chapter_file: 01-software-production
+  - number: 2
+    slug: intellectual-property
+    title: "第 02 期 · 数字时代的知识财产法与开源许可"
+    slide_file: 02-intellectual-property
+    chapter_file: 02-intellectual-property
+  - number: 3
+    slug: business-model
+    title: "第 03 期 · 商业模式：规则下的具体操作"
+    slide_file: 03-business-model
+    chapter_file: 03-business-model
+  - number: 4
+    slug: labor-market
+    title: "第 04 期 · 软件开发劳动力市场"
+    slide_file: 04-labor-market
+    chapter_file: 04-labor-market
+  - number: 5
+    slug: transaction-cost
+    title: "第 05 期 · 交易成本与路径依赖"
+    slide_file: 05-transaction-cost
+    chapter_file: 05-transaction-cost
+  - number: 6
+    slug: organization-governance
+    title: "第 06 期 · 组织结构与治理"
+    slide_file: 06-organization-governance
+    chapter_file: 06-organization-governance
+  - number: 7
+    slug: political-economy
+    title: "第 07 期 · 商业价值与社会价值：开源的政治经济学"
+    slide_file: 07-political-economy
+    chapter_file: 07-political-economy
+  - number: 8
+    slug: information-economy
+    title: "第 08 期 · 信息规则与网络经济"
+    slide_file: 08-information-economy
+    chapter_file: 08-information-economy
+  - number: 9
+    slug: proprietary-rights
+    title: "第 09 期 · 排他权与容纳权、比例原则与 copyleft"
+    slide_file: 09-proprietary-rights
+    chapter_file: 09-proprietary-rights
+  - number: 10
+    slug: labor-compensation
+    title: "第 10 期 · 劳动报酬与财产分配"
+    slide_file: 10-labor-compensation
+    chapter_file: 10-labor-compensation
+  - number: 11
+    slug: culture-matters
+    title: "第 11 期 · 文化的重要作用"
+    slide_file: 11-culture-matters
+    chapter_file: 11-culture-matters

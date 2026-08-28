@@ -1,0 +1,95 @@
+% ─────────────────────────────────────────────
+% 开源的经济学 — LaTeX 模板 (Pandoc template)
+%
+%   暖白底 #F5F0E8 + 普鲁士蓝 #1B3B6B + 衬线字体
+%   12 章对应 12 讲，学术引用 via BibTeX
+% ─────────────────────────────────────────────
+\documentclass[UTF8, 12pt, openany]{ctexbook}
+
+\setmainfont{Source Han Serif SC}
+\setsansfont{Source Han Sans SC}
+\usepackage{fontspec}
+\usepackage[
+  top=30mm, bottom=30mm,
+  left=28mm, right=28mm,
+  headheight=12mm, headsep=8mm,
+  footskip=12mm
+]{geometry}
+
+\definecolor{cream}{HTML}{F5F0E8}
+\definecolor{prussian}{HTML}{1B3B6B}
+\definecolor{copper}{HTML}{8B7355}
+\definecolor{ink}{HTML}{1A1A1A}
+\pagecolor{cream}
+
+\usepackage[color={prussian, copper, cream}, center]{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\color{copper}\footnotesize \textsc{开源的经济学}}
+\fancyhead[LO,RE]{\color{copper}\footnotesize \leftmark}
+\fancyfoot[LE,RO]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\usepackage[
+  colorlinks=false, linkcolor=prussian,
+  citecolor=copper, urlcolor=copper,
+  pdfborder={0 0 0},
+]{hyperref}
+
+\usepackage{titlesec}
+\titleformat{\chapter}
+  {\color{prussian}\Huge\bfseries\raggedright}
+  {\color{copper}\Huge\bfseries\thechapter}
+  {1em}{}
+  [{\color{copper}\rule{0.4\linewidth}{0.8pt}}]
+\titlespacing{\chapter}{0pt}{0pt}{30pt}
+
+\titleformat{\section}
+  {\color{prussian}\Large\bfseries\raggedright}
+  {\thesection}{1em}{}
+  [{\color{copper}\rule{0.3\linewidth}{0.6pt}}]
+
+\titleformat{\subsection}
+  {\color{prussian}\large\bfseries\raggedright}
+  {\thesubsection}{1em}{}[]
+
+\usepackage{setspace}
+\onehalfspacing
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.5em}
+
+\usepackage{enumitem}
+\setlist[enumerate]{leftmargin=2em, itemsep=0.3em, label=\color{copper}(\arabic*)}
+\setlist[itemize]{leftmargin=2em, itemsep=0.3em, label=\color{prussian}\textbullet}
+
+\usepackage{fancyvrb}
+\definecolor{VerbatimColor}{HTML}{EFE8D8}
+
+\usepackage[
+  backend=biber,
+  style=authoryear-ibid,
+  dateabbrev=false,
+  bibencoding=utf8,
+  hyperref=auto,
+]{biblatex}
+\addbibresource{references/bibliography.bib}
+\setlength{\bibhang}{1.5em}
+\renewcommand*{\bibfont}{\small}
+\DeclareFieldFormat{url}{\color{copper}\url{#1}}
+
+\begin{document}
+\frontmatter
+
+% ── 封面（Pandoc 的 $before-body$ 注入） ──
+$before-body$
+
+\mainmatter
+$body$
+
+\cleardoublepage
+\addcontentsline{toc}{chapter}{参考文献}
+\printbibliography[heading=bibnumbered, title={参考文献}]
+
+$after-body$
+\end{document}
