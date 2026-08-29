@@ -22,6 +22,7 @@ echo "=== Sync pipeline $(date) ==="
 
 cd "$BOOK_REPO"
 git fetch origin 2>/dev/null
+git reset --hard origin/main 2>/dev/null
 CURRENT_COMMIT="$(git rev-parse origin/main)"
 
 # ── Check full sync state ──
