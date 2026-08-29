@@ -217,7 +217,7 @@ dark academic tone, Intellectual Visual System, art taste.
 - 《大教堂与集市》的发表
 - 1997年，德国，技术会议
 - 业余人类学家Eric Raymond
-- 观察Linux和实证Fetachmail项目
+- 观察Linux和实证Fetchedmail项目
 - 总结了21条文化准则
 - 发明了Linus 定律：``Given enough eyeballs, all bugs are shallow.''
 
