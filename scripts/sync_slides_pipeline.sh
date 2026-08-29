@@ -98,19 +98,10 @@ if [ "$HAS_SLIDES" = true ]; then
             echo "[changed slides] ${CHANGED_SLIDES}"
         fi
 
-        echo "[render] Deck: $DECK"
-        if [ "$CHANGED_SLIDES" = "RENDER_ALL" ]; then
-            python3 "${SITE_REPO}/scripts/render_slide.py" --deck "$DECK"
-        elif [ -n "$CHANGED_SLIDES" ]; then
-            for SLIDE_NUM in ${CHANGED_SLIDES}; do
-                echo "  [render] slide ${SLIDE_NUM}"
-                python3 "${SITE_REPO}/scripts/render_slide.py" --deck "$DECK" --slide "$SLIDE_NUM" || \
-                    echo "  [render] ✗ slide ${SLIDE_NUM} failed"
-            done
-        else
-            # No source change: use delta mode (render missing pages only)
-            python3 "${SITE_REPO}/scripts/render_slide.py" --deck "$DECK"
-        fi
+        # render_slide.py 通过 hash 对比源 md 和 HTML 决定哪些 slide 需要重渲染
+        # 不再依赖 detect_changed_slides.py 的行号 diff（有漏检问题）
+        echo "[render] Deck: $DECK (hash-based delta)"
+        python3 "${SITE_REPO}/scripts/render_slide.py" --deck "$DECK"
         echo "[render] ✓ $DECK"
     done
 
