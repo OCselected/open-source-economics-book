@@ -102,7 +102,7 @@ dark academic tone, Intellectual Visual System, art taste.
 - 宪章、章程、社会契约、行为准则
 - 许可与秩序
 - 纳税、无政府与集市旁边的教堂
-- Android 企业协会的联合，让事情更复杂
+- Android 企业协会的联合，让事情更复杂：正式、自治
 - 组织，不断演化的协作分工：法律、技术与政治经济学
 
 ---
