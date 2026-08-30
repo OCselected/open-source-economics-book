@@ -52,8 +52,6 @@ dark academic tone, Intellectual Visual System, art taste.
 - 主讲人：「开源之道」·适兕
 
 
-
-
 ---
 ## Slide 2
 
