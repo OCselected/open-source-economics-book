@@ -44,6 +44,18 @@ dark academic tone, Intellectual Visual System, art taste.
 ## Slide 1
 
 * 视觉隐喻：
+  * 深蓝封面上，烫金标题与第十期编号如学术铭文
+
+
+- 「开源之道」·开源的经济学
+- 开源经济学12讲座  ·  第十期  排他权与容他权、比例原则与 Copyleft
+- 「开源之道」·适兕
+
+---
+
+## Slide 2
+
+* 视觉隐喻：
   * 深蓝底色，三根石柱撑起数字时代的穹顶
 
 - 经济学的思维方式
@@ -54,7 +66,7 @@ dark academic tone, Intellectual Visual System, art taste.
 ---
 
 
-## Slide 2
+## Slide 3
 
 * 视觉隐喻：
   * 普鲁士蓝底，古地图卷轴标注前四期讲演坐标
@@ -73,7 +85,9 @@ dark academic tone, Intellectual Visual System, art taste.
 
 ---
 
-## Slide 3* 视觉隐喻：
+## Slide 4
+
+* 视觉隐喻：
   * 学术制图风格，产权光谱仪显示排他与容他渐变
 
 ## 本期核心问题
@@ -83,7 +97,9 @@ dark academic tone, Intellectual Visual System, art taste.
 - Williamson L2 的深化：许可证是制度环境层的核心装置
 
 ---
-## Slide 4* 视觉隐喻：
+## Slide 5
+
+* 视觉隐喻：
   * 古旧印刷机旁，堆叠 1662 年特许状与安妮法典
 
 ## 排他权的制度起源——从印刷特权到数字版权
@@ -96,16 +112,9 @@ dark academic tone, Intellectual Visual System, art taste.
 - Williamson L2：排他权是数字时代最根本的制度环境之一
 
 ---
-## Slide 5* 视觉隐喻：
-  * 深蓝封面上，烫金标题与第十期编号如学术铭文
 
-
-- 「开源之道」·开源的经济学
-- 开源经济学12讲座  ·  第十期  排他权与容他权、比例原则与 Copyleft
-- 「开源之道」·适兕
-
----
-## Slide 6* 视觉隐喻：
+## Slide 6
+* 视觉隐喻：
   * 航海图风格，五个锚点标记制度分析的关键海域
 
 - 议程
@@ -118,7 +127,9 @@ dark academic tone, Intellectual Visual System, art taste.
 - 云时代的 Copyleft 新挑战
 
 ---
-## Slide 7* 视觉隐喻：
+## Slide 7
+
+* 视觉隐喻：
   * 围栏侵入开阔草原，象征公有领域在圈地中萎缩
 
 ## 普赞诺斯基《所有权的终结》——从公有领域到圈地运动
@@ -130,7 +141,9 @@ dark academic tone, Intellectual Visual System, art taste.
 - 开源的出现，正是在这种"圈地运动"的缝隙中生长出来的制度创新
 
 ---
-## Slide 8* 视觉隐喻：
+## Slide 8
+
+* 视觉隐喻：
   * 巨树根系深扎土壤，支撑数字时代知识财产大厦
 
 - 为什么要理解排他权？
@@ -140,7 +153,9 @@ dark academic tone, Intellectual Visual System, art taste.
 - 容他权是开源的经济学基础
 
 ---
-## Slide 9* 视觉隐喻：
+## Slide 9
+
+* 视觉隐喻：
   * 活字印刷字模演变为数字代码字符，展现制度变迁
 
 - 排他权的制度起源
@@ -150,7 +165,9 @@ dark academic tone, Intellectual Visual System, art taste.
 - 制度不是中性的，制度塑造了知识的分配
 
 ---
-## Slide 10* 视觉隐喻：
+## Slide 10
+
+* 视觉隐喻：
   * 高墙环绕知识花园，入口阶梯陡峭象征壁垒升高
 
 - 排他权扩张的制度后果
@@ -160,7 +177,9 @@ dark academic tone, Intellectual Visual System, art taste.
 - 二次利用受阻，这不是市场自然演化，而是制度选择的结果
 
 ---
-## Slide 11* 视觉隐喻：
+## Slide 11
+
+* 视觉隐喻：
   * 像素方块构成的田野，被无形法律网格分割封锁
 
 - 数字时代的圈地运动
@@ -170,7 +189,9 @@ dark academic tone, Intellectual Visual System, art taste.
 - 公有领域急剧萎缩
 
 ---
-## Slide 12* 视觉隐喻：
+## Slide 12
+
+* 视觉隐喻：
   * 双门结构，一扇紧闭代表排他，一扇敞开代表容他
 
 - 容他权的制度逻辑
@@ -181,7 +202,9 @@ dark academic tone, Intellectual Visual System, art taste.
 - 不是废除排他权，而是重新定义排他权的使用方式
 
 ---
-## Slide 13* 视觉隐喻：
+## Slide 13
+
+* 视觉隐喻：
   * 天平两端，一端锁链象征控制，一端飞鸟象征扩散
 
 - 排他权与容他权的对比
@@ -192,7 +215,9 @@ dark academic tone, Intellectual Visual System, art taste.
 - 制度设计的目标是平衡激励与扩散
 
 ---
-## Slide 14* 视觉隐喻：
+## Slide 14
+
+* 视觉隐喻：
   * 印章图案盖在开放文档上，形成传染性制度纹路
 
 - Copyleft 的制度设计
@@ -203,7 +228,9 @@ dark academic tone, Intellectual Visual System, art taste.
 - 这是在 L2 框架内创造 L3 治理创新的典范
 
 ---
-## Slide 15* 视觉隐喻：
+## Slide 15
+
+* 视觉隐喻：
   * 投入石子的水面，涟漪向外强制扩散象征开源激励
 
 - GPL 的逻辑
@@ -214,7 +241,8 @@ dark academic tone, Intellectual Visual System, art taste.
 
 ---
 
-## Slide 16* 视觉隐喻：
+## Slide 16
+* 视觉隐喻：
   * 深普鲁士蓝底，精密天平称量专利壁垒与制药投入的平衡
 
 - 比例原则在知识财产中的运用
@@ -224,7 +252,8 @@ dark academic tone, Intellectual Visual System, art taste.
 - 不强不弱：恰好足以激励贡献，恰好不足以阻碍利用
 
 ---
-## Slide 17* 视觉隐喻：
+## Slide 17
+* 视觉隐喻：
   * 深普鲁士蓝底，制度光谱图展示宽松至强共享规则的分布
 
 - 排他权与容他权的动态均衡
@@ -236,7 +265,8 @@ dark academic tone, Intellectual Visual System, art taste.
 - 不同的项目，选择不同强度的排他权
 
 ---
-## Slide 18* 视觉隐喻：
+## Slide 18
+* 视觉隐喻：
   * 深普鲁士蓝底，古老档案馆中排列各异的法律卷轴象征演化
 
 - 许可证作为制度多样性
@@ -246,7 +276,8 @@ dark academic tone, Intellectual Visual System, art taste.
 - 许可证的演化是开源制度的重要部分
 
 ---
-## Slide 19* 视觉隐喻：
+## Slide 19
+* 视觉隐喻：
   * 深普鲁士蓝底，运河闸口系统展示资本与代码的流向差异
 
 - 许可证光谱的制度含义
@@ -257,7 +288,8 @@ dark academic tone, Intellectual Visual System, art taste.
 - 这个决策影响的是：谁可以获利？
 
 ---
-## Slide 20* 视觉隐喻：
+## Slide 20
+* 视觉隐喻：
   * 深普鲁士蓝底，云端图谱中协议如灯塔指引服务器端新边界
 
 - 云时代的 Copyleft 新挑战
@@ -269,7 +301,8 @@ dark academic tone, Intellectual Visual System, art taste.
 - 制度需要再次演化
 
 ---
-## Slide 21* 视觉隐喻：
+## Slide 21
+* 视觉隐喻：
   * 深普鲁士蓝底，地质剖面显示规则变化与社区适应的时间滞后
 
 - North 的洞见
@@ -280,7 +313,8 @@ dark academic tone, Intellectual Visual System, art taste.
 - 制度的生命力取决于参与者的接受度
 
 ---
-## Slide 22* 视觉隐喻：
+## Slide 22
+* 视觉隐喻：
   * 深普鲁士蓝底，连接私人领地与公共广场的桥梁象征产权创新
 
 - 开源制度的创新意义
@@ -290,7 +324,8 @@ dark academic tone, Intellectual Visual System, art taste.
 - 它证明了：产权制度也可以服务于公共品生产
 
 ---
-## Slide 23* 视觉隐喻：
+## Slide 23
+* 视觉隐喻：
   * 深普鲁士蓝底，历史地图叠加显示交易成本与产权边界交汇
 
 - 与第5期的联系
@@ -301,7 +336,8 @@ dark academic tone, Intellectual Visual System, art taste.
 - 交易成本达到最低，协作达到最优
 
 ---
-## Slide 24* 视觉隐喻：
+## Slide 24
+* 视觉隐喻：
   * 深普鲁士蓝底，建筑模型群展示各主流项目许可证下的生态演化
 
 - 制度设计的案例
@@ -312,7 +348,8 @@ dark academic tone, Intellectual Visual System, art taste.
 - 制度选择决定生态演化
 
 ---
-## Slide 25* 视觉隐喻：
+## Slide 25
+* 视觉隐喻：
   * 深普鲁士蓝底，未绘地图边缘，智能数据如新大陆待规则界定
 
 - 开源许可证的未来
@@ -322,7 +359,8 @@ dark academic tone, Intellectual Visual System, art taste.
 - 容他权的演化不会停止
 
 ---
-## Slide 26* 视觉隐喻：
+## Slide 26
+* 视觉隐喻：
   * 深普鲁士蓝底，木质书架陈列韦伯与莫杰思等学者的开源著作
 
 - 推荐阅读
@@ -332,7 +370,8 @@ dark academic tone, Intellectual Visual System, art taste.
 - 《Open Source Licensing》——Lawrence Rosen
 
 ---
-## Slide 27* 视觉隐喻：
+## Slide 27
+* 视觉隐喻：
   * 深普鲁士蓝底，地平线上孤独制图者面对空白思考权利本质
 
 - 留白问题
@@ -349,7 +388,7 @@ dark academic tone, Intellectual Visual System, art taste.
 * 视觉隐喻：
   * 深普鲁士蓝背景，天平与光谱色条交织，象征排他权与容他权的比例原则。
 
-## 第10期·排他权与容他权、比例原则与 Copyleft · 推荐阅读
+* 第10期·排他权与容他权、比例原则与 Copyleft · 推荐阅读
 
 - 《开源的成功之路》，Steven Weber，外语教学与研究出版社，2007.06
 - 《知识产权正当性解释》，Robert P. Merges，商务印书馆，2023.05

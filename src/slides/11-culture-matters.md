@@ -403,8 +403,6 @@ dark academic tone, Intellectual Visual System, art taste.
 - 需要学习的，也是需要实践的
 - 动态的文化演化，适应时代的发展
 
-
-
 ---
 
 ## Slide 27
