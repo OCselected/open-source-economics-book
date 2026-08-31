@@ -71,7 +71,7 @@ dark academic tone, Intellectual Visual System, art taste.
 
 * 视觉隐喻：多彩吸管承载杯体，隐喻多元议题并置的议程结构。
 
-## 本期核心问题
+*  本期核心问题
 - 开源项目如何组织？没有CEO、没有HR、没有董事会？
 - 制度（许可）、法律（基金会）、文化（行为准则）的三重治理
 - Williamson L3：治理机制层（市场/混合/层级）决定了项目的演化方向
@@ -84,7 +84,7 @@ dark academic tone, Intellectual Visual System, art taste.
 
 * 视觉隐喻：课堂举手场景，隐喻求知若渴与积极参与课堂互动。
 
-## Williamson OLR 三重治理框架
+*  Williamson OLR 社会分析框架
 
 - O（Organization 组织）：基金会、核心开发团队——谁来做决策？
 - L（Law 法律）：许可证、版权、合规——法律边界在哪里？
@@ -512,7 +512,7 @@ dark academic tone, Intellectual Visual System, art taste.
 * 视觉隐喻：
   * 深普鲁士蓝背景，网络节点与组织层级交织，象征开源共同体中的治理结构。
 
-## 第6期·组织结构与治理 · 推荐阅读
+*  第6期·组织结构与治理 · 推荐阅读
 
 - 《组织的逻辑》，Ray Fisman / Tim Sullivan，九州出版社，2023.04
 - 《企业的性质：起源、演变与发展》，Oliver Williamson / Sidney Winter，商务印书馆，2010.09

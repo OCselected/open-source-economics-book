@@ -233,7 +233,9 @@ dark academic tone, Intellectual Visual System, art taste.
 
 ---
 
-## Slide 16* 视觉隐喻：装饰
+## Slide 16
+
+* 视觉隐喻：装饰
 
 - 案例分析之：配套服务及咨询
 - Canonical
@@ -244,7 +246,9 @@ dark academic tone, Intellectual Visual System, art taste.
 - Ubuntu Desktop 是最受欢迎的Linux 桌面版
 
 ---
-## Slide 17* 视觉隐喻：装饰
+## Slide 17
+
+* 视觉隐喻：装饰
 
 - 案例分析之：优化
 - Cygnus
@@ -255,7 +259,9 @@ dark academic tone, Intellectual Visual System, art taste.
 - 1999年11月，RedHat 以$674 million 收购
 
 ---
-## Slide 18* 视觉隐喻：装饰
+## Slide 18
+
+* 视觉隐喻：装饰
 
 - 案例分析之：订阅
 - RedHat
@@ -266,7 +272,9 @@ dark academic tone, Intellectual Visual System, art taste.
 - 2018年被IBM 以340亿美元收购
 
 ---
-## Slide 19* 视觉隐喻：装饰
+## Slide 19
+
+* 视觉隐喻：装饰
 
 - 案例分析之：双重许可
 - MySQL AB
@@ -276,7 +284,9 @@ dark academic tone, Intellectual Visual System, art taste.
 - 2008年，SUN 以十亿美元收购MySQL
 
 ---
-## Slide 20* 视觉隐喻：装饰
+## Slide 20
+
+* 视觉隐喻：装饰
 
 - 案例分析之：（移动终端）平台
 - Google
@@ -285,7 +295,9 @@ dark academic tone, Intellectual Visual System, art taste.
 - FOSS项目：Android OSS
 
 ---
-## Slide 21* 视觉隐喻：母公司统领旗下多元化产品矩阵的生态图示。
+## Slide 21
+
+* 视觉隐喻：母公司统领旗下多元化产品矩阵的生态图示。
 
 - 案例分析之：搜索入口
 - Google
@@ -295,7 +307,9 @@ dark academic tone, Intellectual Visual System, art taste.
 - 间接为Google的搜索服务（广告收入）
 
 ---
-## Slide 22* 视觉隐喻：装饰
+## Slide 22
+
+* 视觉隐喻：装饰
 
 - 案例分析之：增值与拓展
 - Automattic Inc.
@@ -305,7 +319,9 @@ dark academic tone, Intellectual Visual System, art taste.
 - 截止2023年底，估值$985.9 M
 
 ---
-## Slide 23* 视觉隐喻：巨大的吉祥物雕塑如守护者般矗立在创造者身后。
+## Slide 23
+
+* 视觉隐喻：巨大的吉祥物雕塑如守护者般矗立在创造者身后。
 
 - 案例分析之：基金会及财务信托
 - Linux 基金会
@@ -313,7 +329,9 @@ dark academic tone, Intellectual Visual System, art taste.
 - FOSS 项目：Linux、Kubernetes
 
 ---
-## Slide 24* 视觉隐喻：装饰
+## Slide 24
+
+* 视觉隐喻：装饰
 
 - 案例分析之：开发者生态
 - GitHub
@@ -323,7 +341,9 @@ dark academic tone, Intellectual Visual System, art taste.
 - 2018年，被Microsoft 以75亿美元收购
 
 ---
-## Slide 25* 视觉隐喻：深普鲁士蓝几何构成与"互补型"商业并列，隐喻生态中的差异化定位。
+## Slide 25
+
+* 视觉隐喻：深普鲁士蓝几何构成与"互补型"商业并列，隐喻生态中的差异化定位。
 
 - 案例分析之：Open core
 - Elastic.co
@@ -335,7 +355,9 @@ dark academic tone, Intellectual Visual System, art taste.
 - 类似的还有MongoDB、Redis labs、Cockroach Labs等
 
 ---
-## Slide 26* 视觉隐喻：倾斜天平，隐喻本土制度环境与全球化商业逻辑之间的失衡与博弈。
+## Slide 26
+
+* 视觉隐喻：倾斜天平，隐喻本土制度环境与全球化商业逻辑之间的失衡与博弈。
 
 - 案例分析之：互补型
 - IBM、Intel
@@ -344,7 +366,9 @@ dark academic tone, Intellectual Visual System, art taste.
 - 不仅是硬件，操作系统之上的专用数据库、中间件
 
 ---
-## Slide 27* 视觉隐喻：基石不稳、趋势下行，隐喻商业化失败时制度基础的坍塌。
+## Slide 27
+
+* 视觉隐喻：基石不稳、趋势下行，隐喻商业化失败时制度基础的坍塌。
 
 - 本土的环境与外因
 - 落后的发展中国家
@@ -355,7 +379,9 @@ dark academic tone, Intellectual Visual System, art taste.
 - 对软件的生长和技术负债缺少经验
 
 ---
-## Slide 28* 视觉隐喻：装饰
+## Slide 28
+
+* 视觉隐喻：装饰
 
 - 商业化失败常见原因
 - 与上游项目脱节
@@ -366,7 +392,9 @@ dark academic tone, Intellectual Visual System, art taste.
 - 上下游供应链定位失真
 
 ---
-## Slide 29* 视觉隐喻：
+## Slide 29
+
+* 视觉隐喻：
   * 普鲁士蓝古地图，制度边界如海岸线，商船航行规则海域
 
 - 由于交易赖以发生的制度背景会影响对生产的激励和交易的成本，因此，对经济学家而言，如果没有对制度背景进行具体说明就来讨论交换过程，则没有任何意义。
@@ -375,6 +403,7 @@ dark academic tone, Intellectual Visual System, art taste.
 ---
 
 ## Slide 30
+
 * 视觉隐喻：
   * 深普鲁士蓝背景，商业模式路线图与货币符号交织，象征开源商业模式的多元路径。
 

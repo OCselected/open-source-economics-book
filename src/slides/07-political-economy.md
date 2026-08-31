@@ -235,7 +235,9 @@ dark academic tone, Intellectual Visual System, art taste.
 
 ---
 
-## Slide 16* 视觉隐喻：以 WebSphere 为核心的开源生态图，象征 IBM 拥抱 Apache 的战略整合。
+## Slide 16
+
+* 视觉隐喻：以 WebSphere 为核心的开源生态图，象征 IBM 拥抱 Apache 的战略整合。
 
 - 案例4： IBM 拥抱Apache
 - Www 崛起，web server 市场格局
@@ -245,7 +247,9 @@ dark academic tone, Intellectual Visual System, art taste.
 - 让communuity更可信，IBM 更蓝色
 
 ---
-## Slide 17* 视觉隐喻：装饰
+## Slide 17
+
+* 视觉隐喻：装饰
 
 - 案例3：Kebernetes的崛起
 - Google 在大数据架构的失利
@@ -255,7 +259,9 @@ dark academic tone, Intellectual Visual System, art taste.
 - 加大Community的建设
 
 ---
-## Slide 18* 视觉隐喻：Debian 如瑞士军刀，象征万能、可靠与多功能的制度设计。
+## Slide 18
+
+* 视觉隐喻：Debian 如瑞士军刀，象征万能、可靠与多功能的制度设计。
 
 - 铁三角的可持续发展
 - 项目：工程与技术
@@ -265,7 +271,9 @@ dark academic tone, Intellectual Visual System, art taste.
 - 售卖软件副本介质是合理的～
 
 ---
-## Slide 19* 视觉隐喻：城市建筑的虚实重叠，隐喻各国政策对开源态度的时空交错与制度记忆。
+## Slide 19
+
+* 视觉隐喻：城市建筑的虚实重叠，隐喻各国政策对开源态度的时空交错与制度记忆。
 
 - Debian 的巧妙制度设计
 - 社会契约：Communtiy 自治
@@ -276,7 +284,9 @@ dark academic tone, Intellectual Visual System, art taste.
 - Debian 项目宪章
 
 ---
-## Slide 20* 视觉隐喻：长椅上的守候与陪伴，象征公共物品治理中对信任与忠诚的期待。
+## Slide 20
+
+* 视觉隐喻：长椅上的守候与陪伴，象征公共物品治理中对信任与忠诚的期待。
 
 - 回顾一番各国政府的政策建议
 - 事件驱动
@@ -286,12 +296,13 @@ dark academic tone, Intellectual Visual System, art taste.
 - 透明办公
 
 ---
-## Slide 20* 视觉隐喻：
+## Slide 20
+
+* 视觉隐喻：
   * 制度剖面制图，地表政策装饰，地下基石隐喻结构根基
 
-.5
 
-## 国家的制度角色：从“政策建议”到“制度类型”
+* 国家的制度角色：从“政策建议”到“制度类型”
 
 - 政策建议（Policy）只是国家的表层行为
 - 深层问题是：国家本身是包容性制度还是汲取性制度？
@@ -306,7 +317,9 @@ dark academic tone, Intellectual Visual System, art taste.
   开源的繁荣程度 = 制度环境的包容性程度
 
 ---
-## Slide 21* 视觉隐喻：装饰
+## Slide 21
+
+* 视觉隐喻：装饰
 
 - Public good释义
 - 公共物品
@@ -314,13 +327,17 @@ dark academic tone, Intellectual Visual System, art taste.
 - 非市场的私人是否能担当？
 
 ---
-## Slide 22* 视觉隐喻：深普鲁士蓝几何构成与"后三期主题"并列，象征开源经济学议题的延续。
+## Slide 22
+
+* 视觉隐喻：深普鲁士蓝几何构成与"后三期主题"并列，象征开源经济学议题的延续。
 
 - 经济学家看待人性时需要抱持和农民一样细致入微的态度。并非所有人都在搭便车，但如果你不当心，总有些人会把手伸向你的腰包。
 - ————理查德·泰勒 2017年诺贝尔经济学奖得主
 
 ---
-## Slide 23* 视觉隐喻：
+## Slide 23
+
+* 视觉隐喻：
   * 学术制图古地图，三座灯塔坐标，指引信息权利与分配
 
 - 预告开源经济学讲座后3期主题（暂定）
@@ -331,10 +348,12 @@ dark academic tone, Intellectual Visual System, art taste.
 ---
 
 ---
-## Slide 24* 视觉隐喻：
+## Slide 24
+
+* 视觉隐喻：
   * 双柱对比制图，开放花园象征包容，高墙隐喻汲取性制度
 
-## 阿西莫格鲁的制度判断：包容性 vs 汲取性
+*  阿西莫格鲁的制度判断：包容性 vs 汲取性
 
 - 包容性制度（Inclusive Institutions）：
   保护产权、保障广泛参与、允许创新——开源的诞生地
@@ -355,7 +374,7 @@ dark academic tone, Intellectual Visual System, art taste.
 * 视觉隐喻：
   * 深普鲁士蓝背景，天平与政策卷轴交织，象征政治经济学中的制度权衡。
 
-## 第8期·开源的政治经济学 · 推荐阅读
+*  第8期·开源的政治经济学 · 推荐阅读
 
 - Spreeuwenberg / Poell, "Android and the political economy of the mobile Internet", First Monday 17(7)，2012
 - 《公共事物的治理之道》，Elinor Ostrom，上海译文出版社，2000.06
