@@ -85,7 +85,7 @@ dark academic tone, Intellectual Visual System, art taste.
 
 * 视觉隐喻：
   * 蓝色杯中插满多彩吸管——文化多样性的日常化呈现
-## 本期核心问题
+*  本期核心问题
 - 文化为什么重要？——因为所有制度最终依赖文化来支撑
 - 黑客伦理、科学伦理、强互惠：开源文化的基因是什么？
 - 信任作为社会系统的运作基础（Luhmann）
@@ -98,13 +98,14 @@ dark academic tone, Intellectual Visual System, art taste.
 
 * 视觉隐喻：
   * 教室里高举的手——求知欲与主动参与的文化基因
-- 议程
-- 文化的重要作用
-- 反主流文化
-- 黑客文化与伦理
-- GNU宣言与自由软件运动
-- OSI与OSD，Pragmatic 文化兴起
-- 现实的问题是：开源文化离我们有多远？
+
+* 议程
+ - 文化的重要作用
+ - 反主流文化
+ - 黑客文化与伦理
+ - GNU宣言与自由软件运动
+ - OSI与OSD，Pragmatic 文化兴起
+ - 现实的问题是：开源文化离我们有多远？
 
 ---
 
@@ -112,13 +113,13 @@ dark academic tone, Intellectual Visual System, art taste.
 
 * 视觉隐喻：
   * 复活节岛摩艾石像头戴红帽——文化制度中地位与权力的可视化
-- 关于讲座的规则说明
-- 随时交流或提问
-- 指出错误有奖励
-- 所有的错误，我个人负责
-- 个人的视角是有限的，协作更佳
-- 项目开始，就没有结束
-- 遵循「开源之道」
+* 关于讲座的规则说明
+ - 随时交流或提问
+ - 指出错误有奖励
+ - 所有的错误，我个人负责
+ - 个人的视角是有限的，协作更佳
+ - 项目开始，就没有结束
+ - 遵循「开源之道」
 
 ---
 
@@ -126,6 +127,7 @@ dark academic tone, Intellectual Visual System, art taste.
 
 * 视觉隐喻：
   * 议程页面——文化制度分析的框架路径
+
 - 何谓文化？如何识别？
 - 我们都身处文化之中
 - 人类学的视角: 从他者出发的观察
@@ -139,8 +141,9 @@ dark academic tone, Intellectual Visual System, art taste.
 
 * 视觉隐喻：
   * 金属勺中飞溅的焦糖冰淇淋——文化作为感官爆发与制度积淀
-- Culture so understood is a social fact about particular sets of human beings in historical context.
-- ————Yochai Benkler 《The Wealth of Network》Chapter 8
+
+> Culture so understood is a social fact about particular sets of human beings in historical context.
+> ————Yochai Benkler 《The Wealth of Network》Chapter 8
 
 ---
 
@@ -148,7 +151,9 @@ dark academic tone, Intellectual Visual System, art taste.
 
 * 视觉隐喻：
   * 橙色身影在苍茫冰海上前行——制度探索者的勇气与视野
-- 文化的重要作用
+
+*  **文化的重要作用**
+
 - 为什么有的地方富有？
 - 为什么有些地方更具创新？
 - 文化可以降低沟通和交易成本，也可以增加
@@ -176,12 +181,12 @@ dark academic tone, Intellectual Visual System, art taste.
 
 * 视觉隐喻：
   * 《黑客》书封：背景名字如代码——黑客精神由先驱者构建
-- 反主流文化概览
-- 斯图尔特·布兰德
-- 《全球概览》
-- 全球电子链接 WELL
-- 《连线》杂志
-- 计算机是解放自我的武器、计算机构建了令人耳目一新的虚拟共同体、拓展社会边疆
+*  反主流文化概览
+ - 斯图尔特·布兰德
+ - 《全球概览》
+ - 全球电子链接 WELL
+ - 《连线》杂志
+ - 计算机是解放自我的武器、计算机构建了令人耳目一新的虚拟共同体、拓展社会边疆
 
 ---
 
@@ -189,12 +194,13 @@ dark academic tone, Intellectual Visual System, art taste.
 
 * 视觉隐喻：
   * 《若为自由故》：斯托曼长发胡须——自由不羁的精神象征
-- Hacker 文化起源、发展与陨落
-- MIT 人工智能实验室
-- Hacker 手册
-- 太空游戏
-- 软件合同与公司的流行
-- 最后的Hacker: Richard Stallman
+
+* Hacker 文化起源、发展与陨落
+ - MIT 人工智能实验室
+ - Hacker 手册
+ - 太空游戏
+ - 软件合同与公司的流行
+ - 最后的Hacker: Richard Stallman
 
 ---
 
@@ -202,12 +208,12 @@ dark academic tone, Intellectual Visual System, art taste.
 
 * 视觉隐喻：
   * 《大教堂与集市》封面——封闭与开放两种开发模式的并置
-- 自由软件运动及其影响
-- GNU 宣言
-- 自由软件运动
-- GPL 通用公共许可
-- 自由软件基金会
-- GNU 项目：GCC、Emacs、Hard 等等
+*  自由软件运动及其影响
+ - GNU 宣言
+ - 自由软件运动
+ - GPL 通用公共许可
+ - 自由软件基金会
+ - GNU 项目：GCC、Emacs、Hard 等等
 
 ---
 
@@ -215,12 +221,12 @@ dark academic tone, Intellectual Visual System, art taste.
 
 * 视觉隐喻：
   * 1997年德国会议合影——Linux社区早期的人类学现场
-- 《大教堂与集市》的发表
-- 1997年，德国，技术会议
-- 业余人类学家Eric Raymond
-- 观察Linux和实证Fetchedmail项目
-- 总结了21条文化准则
-- 发明了Linus 定律：``Given enough eyeballs, all bugs are shallow.''
+* 《大教堂与集市》的发表
+ - 1997年，德国，技术会议
+ - 业余人类学家Eric Raymond
+ - 观察Linux和实证Fetchedmail项目
+ - 总结了21条文化准则
+ - 发明了Linus 定律：``Given enough eyeballs, all bugs are shallow.''
 
 ---
 
@@ -228,12 +234,12 @@ dark academic tone, Intellectual Visual System, art taste.
 
 * 视觉隐喻：
   * 赛博朋克霓虹街道——开源运动的技术乌托邦背景
-- 开源软件运动
-- 浏览器战争之 Netscape
-- 开源的发明(被忽略的主题)
-- 开源促进会
-- 开源的定义（OSD）
-- 开源软件运动
+*  开源软件运动
+ - 浏览器战争之 Netscape
+ - 开源的发明(被忽略的主题)
+ - 开源促进会
+ - 开源的定义（OSD）
+ - 开源软件运动
 
 ---
 
@@ -241,18 +247,17 @@ dark academic tone, Intellectual Visual System, art taste.
 
 * 视觉隐喻：
   * 《Open Sources》书封：钟象征开源革命的号召
-- 文化基调：开源定义
-- 自由再分发
-- 源代码提供
-- 衍生作品
-- 作者源代码的完整性
-- 不歧视个人或群体
-- 不歧视任何领域
-- 分发时有许可
-- 许可不得针对特定产品
-- 许可不得限制其他软件
-- 许可必须技术中立
-- 图片由通义万相生成
+*  文化基调：开源定义
+ - 自由再分发
+ - 源代码提供
+ - 衍生作品
+ - 作者源代码的完整性
+ - 不歧视个人或群体
+ - 不歧视任何领域
+ - 分发时有许可
+ - 许可不得针对特定产品
+ - 许可不得限制其他软件
+ - 许可必须技术中立
 
 ---
 
@@ -273,7 +278,7 @@ dark academic tone, Intellectual Visual System, art taste.
 
 * 视觉隐喻：
   * 垂直俯视城市环岛与光轨——开源生态的辐射与汇聚
-- 开源运动的理论基础
+*  开源运动的理论基础
 - 科研
 - 标准
 - 学术
@@ -355,13 +360,13 @@ dark academic tone, Intellectual Visual System, art taste.
 
 * 视觉隐喻：
   *深色背景中抽象几何结构——本土接入开源文化的制度路径依赖
-- 本土的突破
-- 接入互联网较晚
-- 没有经历很少连接的网络
-- 没有经历 e-mail 的“网红“时代
-- 严格管理和审查
-- 大国信任的另一面是陌生的协作挑战
-- 语言沟壑
+*  本土的突破
+ - 接入互联网较晚
+ - 没有经历很少连接的网络
+ - 没有经历 e-mail 的“网红“时代
+ - 严格管理和审查
+ - 大国信任的另一面是陌生的协作挑战
+ - 语言沟壑
 
 ---
 
@@ -369,7 +374,7 @@ dark academic tone, Intellectual Visual System, art taste.
 
 * 视觉隐喻：
   *深色背景中蓝色数据流——文化传承的数字基础设施
-- 文化是开源的基石
+*  文化是开源的基石
 - MEME
 - 技术只有在文化的环境中才能获得继承和发展
 - 科学是一种文化
@@ -383,13 +388,13 @@ dark academic tone, Intellectual Visual System, art taste.
 
 * 视觉隐喻：
   *深色背景中金色与蓝色交织——文化制度的成本与收益
-- 我们该如何做？
-- 文化建构
-- 需要文化的塑造者和传播者
-- 需要环境的改造：法律、经济、社会
-- 个人该如何处置？
-- 认知、理性、制度
-- 如果是文明的一种形式，那么一切都值得
+*  我们该如何做？
+ - 文化建构
+ - 需要文化的塑造者和传播者
+ - 需要环境的改造：法律、经济、社会
+ - 个人该如何处置？
+ - 认知、理性、制度
+ - 如果是文明的一种形式，那么一切都值得
 
 ---
 
@@ -397,20 +402,21 @@ dark academic tone, Intellectual Visual System, art taste.
 
 * 视觉隐喻：
   *深色背景中OSPO Summit徽标——文化作为开源价值的释放机制
-- 文化是否是可以改变的？
-- 作为 Software 的认知与理解
-- 东亚的崛起，儒家也是可以适应变化的
-- 承认开源是先进和高级的
-- 需要学习的，也是需要实践的
-- 动态的文化演化，适应时代的发展
+*  文化是否是可以改变的？
+ - 作为 Software 的认知与理解
+ - 东亚的崛起，儒家也是可以适应变化的
+ - 承认开源是先进和高级的
+ - 需要学习的，也是需要实践的
+ - 动态的文化演化，适应时代的发展
 
 ---
 
 ## Slide 27
 
 * 视觉隐喻：
-  * OLIVER E. WILLIAMSON 的社会分析理论分层
-  * 文化是最难以改变的！
+  * 根深蒂固的传统
+* OLIVER E. WILLIAMSON 的社会分析理论分层
+  * 文化是最难以改变的！通常需要100～1000年
 
 ## Slide 28
 * 视觉隐喻：
