@@ -10,6 +10,8 @@
   --copper: #8B7355;
   --warm-white: #EFE8D8;
   --ink: #1A1A1A;
+  --amber: #E07856;
+  --accent: var(--copper);
 }
 
 html, body {
@@ -163,4 +165,108 @@ pre {
   color: var(--copper);
   font-size: 0.9rem;
   border-top: 1px solid var(--copper);
+}
+
+/* ── 暗色模式 ── */
+[data-theme="dark"] {
+  --cream: #1a1a2e;
+  --prussian: #e07856;
+  --copper: #c9a87c;
+  --warm-white: #16213e;
+  --ink: #e8e0d4;
+  --amber: #e07856;
+  --accent: #e07856;
+}
+
+[data-theme="dark"] html,
+[data-theme="dark"] body {
+  background: #1a1a2e;
+  color: #e8e0d4;
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2 {
+  color: #e07856;
+}
+
+[data-theme="dark"] h1 {
+  border-bottom-color: #e07856;
+}
+
+[data-theme="dark"] h3 {
+  color: #c9a87c;
+}
+
+[data-theme="dark"] p,
+[data-theme="dark"] li,
+[data-theme="dark"] td,
+[data-theme="dark"] th {
+  color: #e8e0d4;
+}
+
+[data-theme="dark"] .toc-list li {
+  border-bottom-color: rgba(201, 168, 124, 0.2);
+}
+
+[data-theme="dark"] .toc-list li a {
+  color: #e8e0d4;
+}
+
+[data-theme="dark"] .toc-list .toc-num {
+  color: #c9a87c;
+}
+
+[data-theme="dark"] blockquote {
+  border-left-color: #e07856;
+  background: #16213e;
+  color: #e07856;
+}
+
+[data-theme="dark"] pre {
+  background: #16213e;
+  border-left-color: #e07856;
+}
+
+[data-theme="dark"] code {
+  color: #e8e0d4;
+}
+
+[data-theme="dark"] .footer {
+  color: #c9a87c;
+  border-top-color: rgba(201, 168, 124, 0.3);
+}
+
+[data-theme="dark"] .references {
+  color: #c9a87c;
+}
+
+[data-theme="dark"] .references h2 {
+  color: #e07856;
+}
+
+[data-theme="dark"] table {
+  border-color: rgba(201, 168, 124, 0.3);
+}
+
+[data-theme="dark"] th {
+  background: rgba(224, 120, 86, 0.1);
+  color: #e07856;
+  border-bottom-color: rgba(224, 120, 86, 0.4);
+}
+
+[data-theme="dark"] td {
+  border-bottom-color: rgba(201, 168, 124, 0.15);
+}
+
+[data-theme="dark"] tr.odd {
+  background: rgba(22, 33, 62, 0.5);
+}
+
+[data-theme="dark"] tr.even {
+  background: rgba(26, 26, 46, 0.5);
+}
+
+[data-theme="dark"] hr,
+[data-theme="dark"] hr {
+  border-color: rgba(201, 168, 124, 0.3);
 }
