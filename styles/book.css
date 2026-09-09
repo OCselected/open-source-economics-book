@@ -28,6 +28,55 @@ html, body {
   padding: 4rem 2rem;
 }
 
+/* ── 顶栏 ── */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 1.5rem;
+  background: var(--cream);
+  border-bottom: 1px solid rgba(139,115,85,0.2);
+  font-family: 'Inter', 'Noto Sans SC', sans-serif;
+}
+.topbar-left {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--prussian);
+  letter-spacing: 0.02em;
+}
+.topbar-right {
+  display: flex;
+  gap: 0.5rem;
+}
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--copper);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--prussian);
+  font-size: 0.8rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.theme-toggle:hover {
+  background: var(--warm-white);
+}
+.theme-toggle .icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+.theme-toggle .label {
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
 /* ── 封面 ── */
 .cover {
   background: var(--prussian);
